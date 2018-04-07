@@ -1,4 +1,257 @@
+/*-------- Login --------*/
+
+.login{
+	background-image: url(../images/painel-administrativo-1.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 0px !important;
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.middle{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.login .painel{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 412px;
+	width: calc(100% - 40px);
+	padding: 36px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.55);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,.55);
+	box-shadow: 0 2px 3px rgba(0,0,0,.55);
+	border: 1px solid #818c94;
+	border: 1px solid rgba(0,0,0,.4);
+	min-width: 320px;
+	min-height: 364px;
+}
+
+.login h1{
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0;
+	color: #0066ff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.login p{
+	font-size: 1.25em;
+	line-height: 1.25em;
+	color: #666;
+	margin: 0;
+	text-align: center;
+}
+
+.login input{
+	border: 1px solid #0066ff !important;
+	border-radius: .2em !important;
+	margin: 0 !important;
+	padding-left: 1em !important;
+	width: calc(100% - 1.06em) !important;
+}
+
+.login label{
+	color: #0066ff !important;
+	font-weight: bold;
+	padding-left: 1em;
+}
+
+.login .btn{
+	background-color: #0066ff !important;
+	width: 100%;
+	border-radius: .2em;
+	height: 3rem;
+}
+
+.login h2{
+	font-size: 1.25em;
+	text-align: center;
+	text-transform: uppercase;
+	color: #0066ff;
+	padding: 1em 0;
+	min-width: 320px;
+	max-width: 412px;
+	width: calc(100% - 40px);
+	margin: 0 auto;
+	margin-top: calc(-1.8em + -1.25em) !important;
+}
+
+/*--------- Menu -----------*/
+
+.menu{
+	width: 270px;
+	height: 100vh;
+	float: left;
+	-webkit-box-shadow: 0 0px 30px rgba(0,0,0,.90);
+	-moz-box-shadow: 0 0px 30px rgba(0,0,0,.90);
+	box-shadow: 0 0px 30px rgba(0,0,0,.90);
+	overflow: hidden;
+	transition: all 0.5s;
+}
+
+.menu button{
+	background-color: #151551;
+	width: 40px;
+	height: 40px;
+	font-size: 1.5em;
+	position: absolute;
+	bottom: 20px;
+	left: 280px;
+	z-index: 1000;
+	border: none;
+	color: darkorange;
+	border-radius: 50%;
+	transition: all 0.5s;
+}
+
+.menu button:focus{
+	background-color: #151551;
+}
+
+.user{
+	height: 30vh;
+	background-color: #151551;
+}
+
+.user img{
+	width: 90px;
+	height: 90px;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 50%;
+	float: left;
+	border: 2px solid #ccccb3;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.55);
+	-moz-box-shadow: 0 2px 3px rgba(0,0,0,.55);
+	box-shadow: 0 2px 3px rgba(0,0,0,.55);
+	margin-top: calc(30vh - 110px);
+	margin-left: 5px;
+	transition: all 0.5s;
+}
+
+.user h1{
+	font-size: 1.25em;
+	font-weight: bold;
+	color: white;
+	margin: 0;
+	position: relative;
+	top: calc(30vh - 85px);
+	left: 15px;
+	transition: all 0.5s;
+}
+
+.user h2{
+	font-size: 1em;
+	color: white;
+	margin: 0;
+	position: relative;
+	top: calc(30vh - 85px);
+	left: 15px;
+	transition: all 0.5s;
+}
+
+.links{
+	height: 60vh;
+	background-color: #151551;
+	overflow: auto;
+}
+
+.links li{
+	width: 100% !important;
+}
+
+.links span:not(.fa){
+	display: block;
+	transition: all 0.5s;
+}
+
+.links .svg-inline--fa{
+	display: none;
+	transition: all 0.5s;
+}
+
+.links .collapsible-header{
+	background-color: transparent !important;
+	padding: 15px !important;
+	font-size: 1.5em;
+	color: white !important;
+}
+
+.links .collapsible-body{
+	padding: 0 !important;
+}
+
+.links .collapsible-body a{
+	padding: 20px 30px !important;
+	color: white;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	font-size: 1.25em;
+}
+
+.links a{
+	padding: 0 !important;
+}
+
+.footer{
+	height: 10vh;
+	background-color: darkorange;
+}
+
+.menu.close{
+	width: 100px;
+}
+
+.menu.close .user h1{
+	display: none;
+}
+
+.menu.close .user h2{
+	display: none;
+}
+
+.menu.close .svg-inline--fa{
+	display: block;
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.menu.close span:not(.fa){
+	display: none;
+}
+
+.menu.close img{
+	transform: scale(0.7);
+}
+
 /*-------- TIPOGRAFIA --------*/
+
+.row{
+	margin-bottom: 0 !important;
+}
+
+main{
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+nav{
+	color: #000 !important;
+	background-color: transparent !important;
+	width: initial !important;
+	height: initial !important;
+	line-height: initial !important;
+	box-shadow: none !important;
+}
 
 address{
 	font-style: normal;

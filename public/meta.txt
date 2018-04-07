@@ -1,0 +1,66 @@
+Painel Administrativo
+
+- Página de Login;
+	- Criar imagem de fundo;
+	- Criar campos de formulario;
+	- Verificação de Usuário;
+	- Interação para cada tipo de resposta;
+
+- Página Inicial do Painel;
+	- Dados principais do site;
+		- Nome do Site;
+		- Logormarca;
+		- Meios de contatos;
+	- Graficos Personalizados;
+
+- Página para criação de Categoria;
+	- Titulo da Categoria (Máximo de 50 Caracteres);
+	- Descrição da Categoria (Máximo de 150 Caracteres);
+
+- Página para criação de materias;
+	- Titulo da Página (Máximo 50 caracteres);
+	- Descrição da Pagina (Máximo 150 caracteres);
+	- Url da Página;
+	- Titulo da Materia;
+	- CKEDITOR Personalizado com ferramentas voltadas para o SEO;
+		- Tamanho de Fontes;
+		- Tags H1, H2, H3;
+		- Cores de Fontes;
+		- Personalização de fontes;
+			- Negrito;
+			- Italico;
+			- Subliminhado;
+			- Tipo de Fonte;
+		- Inserção de imagens;
+			- Link;
+			- Titulo;
+			- Descrição;
+		- Inserção de Links;
+		- Ancoragem;
+		- Tags Semanticas;
+
+- Página de Clientes;
+	- Clientes interessados;
+		- E-mail do cliente;
+		- Frequencia de conteudo;
+	- Filtro de pesquisa;
+		- Por Frequencia;
+		- Data de inscrição;
+
+- Página Administrativa;
+	- Criação de Editores;
+		- Nome do completo;
+		- Telefone de contato;
+		- Email empresarial;
+		- Descrição sobre o editor;
+		- Foto de perfil do editor;
+		- Nome de usuario;
+		- Criar senha;
+	- Edição de Editores;
+		- Nome do completo;
+		- Telefone de contato;
+		- Email empresarial;
+		- Descrição sobre o editor;
+		- Foto de perfil do editor;
+		- Alterar senha;
+	- Exclusão de Editores;
