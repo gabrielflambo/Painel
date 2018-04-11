@@ -12,9 +12,9 @@
 	<meta name="author" content="Gabriel Flambo">
 
 	<!-- Google -->
-	<title>Painel Administrativo</title>
-	<meta name="description" content="Painel visando facilidade no dia a dia no ambiente Web"/>
-	<meta name="keywords" content="Painel Administrativo"/>
+	<title>Dashboard</title>
+	<meta name="description" content="Pagina Inicial do Painel com Dados Administrativos"/>
+	<meta name="keywords" content="Dashboard"/>
 
 </head>
 <body>

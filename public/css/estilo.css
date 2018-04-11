@@ -95,9 +95,10 @@
 	box-shadow: 0 0px 30px rgba(0,0,0,.90);
 	overflow: hidden;
 	transition: all 0.5s;
+	position: relative;
 }
 
-.menu button{
+button.bar{
 	background-color: #151551;
 	width: 40px;
 	height: 40px;
@@ -112,7 +113,7 @@
 	transition: all 0.5s;
 }
 
-.menu button:focus{
+button.bar:focus{
 	background-color: #151551;
 }
 
@@ -164,6 +165,10 @@
 	overflow: auto;
 }
 
+.links p{
+	margin: 0;
+}
+
 .links li{
 	width: 100% !important;
 }
@@ -210,29 +215,203 @@
 	width: 100px;
 }
 
+.menu.close img{
+	float: none;
+	margin-top: 30px;
+}
+
 .menu.close .user h1{
-	display: none;
+	top: -10px;
+	left: 0;
+	text-align: center;
+	font-size: 1em;
 }
 
 .menu.close .user h2{
-	display: none;
+	top: -10px;
+	left: 0;
+	text-align: center;
+	font-size: 0.7em;
 }
 
 .menu.close .svg-inline--fa{
 	display: block;
-	font-size: 1.5em;
+	font-size: 2em;
 	width: 100%;
 }
 
-.menu.close span:not(.fa){
-	display: none;
+.menu.close p{
+	text-align: center;
+	font-size: 0.7em;
+}
+
+.menu.close button .svg-inline--fa{
+	font-size: 1em;
 }
 
 .menu.close img{
 	transform: scale(0.7);
 }
 
+.menu.close .collapsible-header{
+	padding: 15px 0 !important;
+}
+
+.menu.close .collapsible-body{
+	padding: 15px 0 !important;
+}
+
+/*-------- Página dos Posts --------*/
+
+.post{
+	background-color: #cccccc;
+	padding: 2%;
+	min-height: 100vh;
+}
+
+.post h2{
+	font-size: 2em;
+	font-weight: bold;
+	color: #404040;
+}
+
+.post input{
+	background-color: white !important;
+	border: 1px solid #666666 !important;
+	border-radius: .5em !important;
+}
+
+.post input::placeholder{
+	padding-left: 1em;
+	color: #666666;
+}
+
+.post p{
+	margin: 0;
+}
+
+.post #url{
+	width: auto !important;
+	height: auto !important;
+	background-color: transparent !important;
+	border: none !important;
+}
+
+.post #url:focus{
+	background-color: white !important;
+	border: 1px solid #666666 !important;
+}
+
+.post #editar{
+	background-color: white !important;
+	border: 1px solid #666666;
+	border-radius: .5em;
+	padding: 0 2em;
+	color: #666666;
+}
+
+.post #file{
+	position: absolute;
+	width: 150px;
+	margin-left: -55px;
+	height: 3rem;
+	opacity: 0;
+	cursor: pointer !important;
+}
+
+.post #arquivo{
+	width: 150px;
+	height: 3rem;
+	background-color: #999999 !important;
+	margin: 2em 0;
+}
+
+.post .fa-lightbulb{
+	color: #b38f00;
+}
+
+.post .btn{
+	background-color: #ff0000 !important;
+}
+
+/*-------- SEO --------*/
+
+.seo{
+	background-color: #cccccc;
+	padding: 2% 5%;
+}
+
+.seo h2{
+	font-size: 2em;
+	font-weight: bold;
+	color: #404040;
+}
+
+.seo h3{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #999999;
+}
+
+.seo .google{
+	background-color: white !important;
+	border: 1px solid #666666 !important;
+	border-radius: .5em !important;
+	padding: 5%;
+}
+
+.seo h4{
+	margin: 0;
+	font-size: 18px;
+	color: #1a0dab;
+	cursor: pointer !important;
+}
+
+.seo h4:hover{
+	text-decoration: underline;
+}
+
+.seo .google cite{
+	font-size: 14px;
+	color: #006621;
+	margin: 0;
+}
+
+.seo time{
+	color: #808080;
+}
+
+.seo p{
+	font-size: small;
+	color: #545454;
+	margin: 0;
+}
+
+.seo input, .seo textarea{
+	background-color: white !important;
+	border: 1px solid #666666 !important;
+	border-radius: .5em !important;
+	margin-bottom: 0 !important;
+}
+
+.seo textarea{
+	height: auto !important;
+}
+
+.seo .progress{
+	height: 10px !important;
+	border-radius: 1em !important;
+	background-color: white !important;
+}
+
+.seo .fa-lightbulb{
+	color: #b38f00;
+}
+
 /*-------- TIPOGRAFIA --------*/
+body{
+	overflow: hidden;
+}
 
 .row{
 	margin-bottom: 0 !important;
@@ -254,6 +433,10 @@ nav{
 }
 
 address{
+	font-style: normal;
+}
+
+cite{
 	font-style: normal;
 }
 
