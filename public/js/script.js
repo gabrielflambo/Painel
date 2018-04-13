@@ -23,6 +23,12 @@ $(document).ready(function() {
 		}
 	});
 
+	var media = $('body').width();
+	if (media < 993) {
+		$('.menu').addClass('close');
+		$('button.bar').css('left', '110px');
+	}
+
 	// Página de Posts
 
 	var url_atual = window.location.hostname;

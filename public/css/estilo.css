@@ -99,7 +99,7 @@
 }
 
 button.bar{
-	background-color: #151551;
+	background-color: #181715;
 	width: 40px;
 	height: 40px;
 	font-size: 1.5em;
@@ -108,18 +108,18 @@ button.bar{
 	left: 280px;
 	z-index: 1000;
 	border: none;
-	color: darkorange;
+	color: #c78a37;
 	border-radius: 50%;
 	transition: all 0.5s;
 }
 
 button.bar:focus{
-	background-color: #151551;
+	background-color: #181715;
 }
 
 .user{
 	height: 30vh;
-	background-color: #151551;
+	background-color: #181715;
 }
 
 .user img{
@@ -161,7 +161,7 @@ button.bar:focus{
 
 .links{
 	height: 60vh;
-	background-color: #151551;
+	background-color: #181715;
 	overflow: auto;
 }
 
@@ -192,6 +192,7 @@ button.bar:focus{
 
 .links .collapsible-body{
 	padding: 0 !important;
+	background-color: #c78a37 !important;
 }
 
 .links .collapsible-body a{
@@ -208,7 +209,7 @@ button.bar:focus{
 
 .footer{
 	height: 10vh;
-	background-color: darkorange;
+	background-color: #c78a37;
 }
 
 .menu.close{
@@ -217,7 +218,11 @@ button.bar:focus{
 
 .menu.close img{
 	float: none;
-	margin-top: 30px;
+	margin-top: 15%;
+	border-radius: 0 !important;
+	width: 100% !important;
+	margin-left: 0 !important;
+	margin-bottom: 10px !important;
 }
 
 .menu.close .user h1{
@@ -249,10 +254,6 @@ button.bar:focus{
 	font-size: 1em;
 }
 
-.menu.close img{
-	transform: scale(0.7);
-}
-
 .menu.close .collapsible-header{
 	padding: 15px 0 !important;
 }
@@ -264,7 +265,7 @@ button.bar:focus{
 /*-------- Página dos Posts --------*/
 
 .post{
-	background-color: #cccccc;
+	background-color: #f2f2f2;
 	padding: 2%;
 	min-height: 100vh;
 }
@@ -337,7 +338,7 @@ button.bar:focus{
 /*-------- SEO --------*/
 
 .seo{
-	background-color: #cccccc;
+	background-color: #f2f2f2;
 	padding: 2% 5%;
 }
 
@@ -375,6 +376,7 @@ button.bar:focus{
 	font-size: 14px;
 	color: #006621;
 	margin: 0;
+	word-break: break-all;
 }
 
 .seo time{
@@ -408,6 +410,98 @@ button.bar:focus{
 	color: #b38f00;
 }
 
+/*-------- Busca --------*/
+
+.busca{
+	padding: 5%;
+}
+
+.busca h2{
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #666;
+}
+
+.busca p{
+	font-size: 1em;
+	line-height: 1.25em;
+	color: #808080;
+}
+
+.busca .fa-lightbulb{
+	color: #b38f00;
+}
+
+.busca input{
+	background-color: white !important;
+	border: 1px solid #666666 !important;
+	border-radius: .5em !important;
+	margin-bottom: 0 !important;
+}
+
+.busca .btn{
+	background-color: #181715;
+	width: 100%;
+	height: 3.2rem;
+	border-radius: .5em;
+}
+
+@media(min-width: 601px){
+
+	.busca input{
+		width: 80% !important;
+		float: left;
+		border-radius: .5em 0 0 .5em !important;
+	}
+
+	.busca .btn{
+		width: 20% !important;
+		float: right;
+		margin-top: -3.2rem;
+		border-radius: 0 .5em .5em 0 !important;
+	}
+
+}
+
+.busca [type="checkbox"].filled-in+label{
+	margin: .2em 0;
+}
+
+.busca [type="checkbox"].filled-in:checked+label:after{
+	background-color: #181715 !important;
+	border: 1px solid #181715 !important;
+}
+
+.resultado{
+	padding: 5%;
+}
+
+.resultado h2, .resultado h3{
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.resultado a:not(.btn){
+	color: black;
+	text-decoration: underline !important;
+}
+
+.resultado .btn{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #c78a37 !important;
+	text-align: center;
+	line-height: 50px;
+	padding: 0 !important;
+}
+
+.resultado article{
+	border: 2px solid #999;
+	padding: 5%;
+	margin: 2em 0;
+}
+
 /*-------- TIPOGRAFIA --------*/
 body{
 	overflow: hidden;
@@ -421,6 +515,7 @@ main{
 	height: 100vh;
 	overflow-y: auto;
 	overflow-x: hidden;
+	background-color: #f2f2f2;
 }
 
 nav{

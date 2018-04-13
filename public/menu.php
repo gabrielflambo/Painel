@@ -17,15 +17,15 @@
         <li>
           <div class="collapsible-header"><p><span class="fa fa-paste"></span> Categorias</p></div>
           <div class="collapsible-body">
-            <a href="posts.php"><p><span class="fa fa-edit"></span> Criar</p></a>
-            <a href="#"><p><span class="fa fa-search"></span> Buscar</p></a>
+            <a href="categorias.php"><p><span class="fa fa-edit"></span> Criar</p></a>
+            <a href="busca-categorias.php"><p><span class="fa fa-search"></span> Buscar</p></a>
           </div>
         </li>
         <li>
           <div class="collapsible-header"><p><span class="fa fa-newspaper"></span> Matérias</p></div>
           <div class="collapsible-body">
-            <a href="#"><p><span class="fa fa-edit"></span> Criar</p></a>
-            <a href="#"><p><span class="fa fa-search"></span> Buscar</p></a>
+            <a href="materias.php"><p><span class="fa fa-edit"></span> Criar</p></a>
+            <a href="busca-materias.php"><p><span class="fa fa-search"></span> Buscar</p></a>
           </div>
         </li>
         <li>
