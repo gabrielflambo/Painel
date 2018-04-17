@@ -83,6 +83,17 @@
 						</div>
 					</div>
 				</section>
+
+				<section>
+					<div class="row action center">
+						<article>
+							<div class="col l8 s12">
+								<button type="submit" class="btn waves-effect">Gravar</button>
+							</div>
+						</article>
+					</div>
+				</section>
+
 			</form>
 		</fieldset>
 

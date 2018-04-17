@@ -16,7 +16,7 @@ $(document).ready(function() {
 		var classe = $('.menu').attr('class');
 		if (classe == 'menu') {
 			$('.menu').addClass('close');
-			$(this).css('left', '110px');
+			$(this).css('left', '80px');
 		}else{
 			$('.menu').removeClass('close');
 			$(this).css('left', '280px');
@@ -26,7 +26,7 @@ $(document).ready(function() {
 	var media = $('body').width();
 	if (media < 993) {
 		$('.menu').addClass('close');
-		$('button.bar').css('left', '110px');
+		$('button.bar').css('left', '80px');
 	}
 
 	// Página de Posts
@@ -127,7 +127,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-	CKEDITOR.replace('descricao');
 
 	var largura = $('.progress').width();
 	var titlemax = largura/50;
@@ -172,5 +171,40 @@ $(document).ready(function() {
 		}
 
 	});
+
+	$('#ultimonome').focusout(function(event) {
+		var primeironome = $('#primeironome').val();
+		var ultimonome = $(this).val();
+		if (primeironome != "" && ultimonome != "") {
+			var usuario = primeironome + '.' + ultimonome;
+			usuario = usuario.replace(/[áàãâä]/g, 'a');
+			usuario = usuario.replace(/[éèêë]/g, 'e');
+			usuario = usuario.replace(/[íìîï]/g, 'i');
+			usuario = usuario.replace(/[óòõôö]/g, 'o');
+			usuario = usuario.replace(/[úùûü]/g, 'u');
+			usuario = usuario.replace(/[ç]/g, 'c');
+			usuario = usuario.replace(/[\s]/g, '').toLowerCase();
+			$('#usuario').val(usuario);
+		}
+	});
+
+	$('#telefone').focusout(function(event) {
+		var texto = $(this).val();
+		var wordLimit = $(this).val().length;
+		var count = 0;
+		var valor = [];
+		while (count < wordLimit) { 
+			valor.push(texto[count]);
+			count++;
+		}
+		if (wordLimit == 11) {
+			$(this).val('(' + valor[0]+valor[1] + ') ' + valor[2]+valor[3]+valor[4]+valor[5]+valor[6] + '-' + valor[7]+valor[8]+valor[9]+valor[10])
+		}
+		else if (wordLimit == 10) {
+			$(this).val('(' + valor[0]+valor[1] + ') ' + valor[2]+valor[3]+valor[4]+valor[5] + '-' + valor[6]+valor[7]+valor[8]+valor[9])
+		}
+	});
+
+	CKEDITOR.replace('descricao');
 
 });

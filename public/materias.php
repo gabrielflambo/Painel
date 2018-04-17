@@ -28,7 +28,7 @@
 				<section>
 					<div class="row post">
 						<div class="col l4 s12 push-l8">
-							<button type="button" class="btn waves-effect right"><span class="fa fa-trash"></span></button>
+							<a href="#" class="btn waves-effect right"><span class="fa fa-trash"></span></a>
 						</div>
 						<div class="col l8 s12 pull-l4">
 							<h2>Adicionar Post <span class="fa fa-edit"></span></h2>
@@ -87,6 +87,17 @@
 						</div>
 					</div>
 				</section>
+
+				<section>
+					<div class="row action center">
+						<article>
+							<div class="col l8 s12">
+								<button type="submit" class="btn waves-effect">Gravar</button>
+							</div>
+						</article>
+					</div>
+				</section>
+				
 			</form>
 		</fieldset>
 		

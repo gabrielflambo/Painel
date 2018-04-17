@@ -185,8 +185,8 @@ button.bar:focus{
 
 .links .collapsible-header{
 	background-color: transparent !important;
-	padding: 15px !important;
-	font-size: 1.5em;
+	padding: 10px 15px !important;
+	font-size: 1.25em;
 	color: white !important;
 }
 
@@ -196,7 +196,7 @@ button.bar:focus{
 }
 
 .links .collapsible-body a{
-	padding: 20px 30px !important;
+	padding: 10px 30px !important;
 	color: white;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
@@ -212,31 +212,46 @@ button.bar:focus{
 	background-color: #c78a37;
 }
 
+.footer h2{
+	margin: 0;
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+	color: #181715;
+	padding-top: 2.5vh;
+	transition: all 0.5s;
+}
+
 .menu.close{
-	width: 100px;
+	width: 70px;
+}
+
+.menu.close .footer h2{
+	transform: translateX(-500%);
 }
 
 .menu.close img{
 	float: none;
-	margin-top: 15%;
+	height: 30vh;
+	margin-top: 0 !important;
 	border-radius: 0 !important;
 	width: 100% !important;
 	margin-left: 0 !important;
 	margin-bottom: 10px !important;
 }
 
+.menu.close .collapsible-body a{
+	padding: 10px !important;
+}
+
 .menu.close .user h1{
-	top: -10px;
-	left: 0;
-	text-align: center;
-	font-size: 1em;
+	transform: translateX(-200%);
+	position: absolute;
 }
 
 .menu.close .user h2{
-	top: -10px;
-	left: 0;
-	text-align: center;
-	font-size: 0.7em;
+	transform: translateX(-200%);
+	position: absolute;
 }
 
 .menu.close .svg-inline--fa{
@@ -255,10 +270,6 @@ button.bar:focus{
 }
 
 .menu.close .collapsible-header{
-	padding: 15px 0 !important;
-}
-
-.menu.close .collapsible-body{
 	padding: 15px 0 !important;
 }
 
@@ -333,6 +344,14 @@ button.bar:focus{
 
 .post .btn{
 	background-color: #ff0000 !important;
+}
+
+.action .btn{
+	background-color: #181715 !important;
+	color: #c78a37; 
+	padding: 0 4em;
+	border-radius: 2em;
+	margin: 2em 0;
 }
 
 /*-------- SEO --------*/
@@ -486,6 +505,10 @@ button.bar:focus{
 	text-decoration: underline !important;
 }
 
+.resultado .urls{
+	word-break: break-all;
+}
+
 .resultado .btn{
 	width: 50px;
 	height: 50px;
@@ -500,6 +523,93 @@ button.bar:focus{
 	border: 2px solid #999;
 	padding: 5%;
 	margin: 2em 0;
+}
+
+/*-------- Editores --------*/
+
+.usuarios{
+	padding: 5%;
+}
+
+.usuarios h2{
+	font-size: 2em;
+	font-weight: bold;
+	color: #404040;
+	margin-top: 0;
+}
+
+.usuarios p{
+	font-size: 1.25em;
+	line-height: 1.25em;
+	color: #666;
+}
+
+.usuarios fieldset{
+	background-color: #181715;
+	border-radius: 2em;
+	padding: 20px !important;
+}
+
+.usuarios input, .usuarios textarea{
+	background-color: white !important;
+	border: 1px solid #666666 !important;
+	border-radius: .5em !important;
+}
+
+.usuarios input::placeholder, .usuarios textarea::placeholder{
+	padding-left: 1em;
+	color: #181715;
+	font-weight: bold;
+}
+
+.usuarios textarea{
+	height: auto !important;
+	margin-bottom: 15px;
+}
+
+.usuarios .btn{
+	background-color: #c78a37 !important;
+	color: #181715; 
+	padding: 0 4em;
+	font-weight: bold;
+	border-radius: 2em;
+}
+
+.usuarios .btn.right{
+	background-color: #ff0000 !important;
+	color: white;
+	padding: 0 2em;
+	font-weight: normal;
+	border-radius: 0;
+}
+
+/*-------- Clientes --------*/
+
+.clientes{
+	padding: 5%;
+}
+
+.clientes h2{
+	font-size: 2em;
+	font-weight: bold;
+	color: #404040;
+}
+
+.clientes .fa-lightbulb{
+	color: #b38f00;
+}
+
+.clientes h3{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #404040;
+}
+
+.clientes p{
+	background-color: white !important;
+	border: 1px solid #666666 !important;
+	border-radius: .5em !important;
+	padding: .5em;
 }
 
 /*-------- TIPOGRAFIA --------*/

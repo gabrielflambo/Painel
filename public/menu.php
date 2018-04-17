@@ -29,19 +29,19 @@
           </div>
         </li>
         <li>
-          <a href="#"><div class="collapsible-header"><p><span class="fa fa-users"></span> Clientes</p></div></a>
+          <a href="busca-clientes.php"><div class="collapsible-header"><p><span class="fa fa-users"></span> Clientes</p></div></a>
         </li>
         <li>
           <div class="collapsible-header"><p><span class="fa fa-lock"></span> Editores</p></div>
           <div class="collapsible-body">
-            <a href="#"><p><span class="fa fa-edit"></span> Criar</p></a>
-            <a href="#"><p><span class="fa fa-search"></span> Buscar</p></a>
+            <a href="usuarios.php"><p><span class="fa fa-edit"></span> Criar</p></a>
+            <a href="busca-editores.php"><p><span class="fa fa-search"></span> Buscar</p></a>
           </div>
         </li>
       </ul>
     </div>
     <div class="footer">
-
+      <h2>LibertyMark</h2>
     </div>
   </div>
 </nav>

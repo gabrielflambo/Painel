@@ -48,14 +48,14 @@
 							<a href="categorias.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
 							<h2><strong>Título:</strong> Marketing Digital</h2>
 							<h3><strong>URL:</strong> 
-								<a href="www.localhost.com.br/marketing-digital/"> www.localhost.com.br/marketing-digital/</a>
+								<a href="www.localhost.com.br/marketing-digital/" class="urls"> www.localhost.com.br/marketing-digital/</a>
 							</h3>
 						</article>
 						<article>
 							<a href="categorias.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
 							<h2><strong>Título:</strong> Marketing Digital</h2>
 							<h3><strong>URL:</strong> 
-								<a href="www.localhost.com.br/marketing-digital/"> www.localhost.com.br/marketing-digital/</a>
+								<a href="www.localhost.com.br/marketing-digital/" class="urls"> www.localhost.com.br/marketing-digital/</a>
 							</h3>
 						</article>
 					</div>
