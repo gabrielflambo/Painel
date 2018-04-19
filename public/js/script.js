@@ -10,26 +10,86 @@ $(document).ready(function() {
 		height: '60vh'
 	});
 
-	// Efeito do Menu
+	// Grafico
 
-	$('button.bar').click(function(event) {
-		var classe = $('.menu').attr('class');
-		if (classe == 'menu') {
-			$('.menu').addClass('close');
-			$(this).css('left', '80px');
-		}else{
-			$('.menu').removeClass('close');
-			$(this).css('left', '280px');
-		}
+	$(function () {
+		new Chart(document.getElementById("line_chart").getContext("2d"), getChartJs('line'));
 	});
 
+	function getChartJs(type) {
+		var config = null;
+
+		if (type === 'line') {
+			config = {
+				type: 'line',
+				data: {
+					labels: ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"],
+					datasets: [{
+						label: "Novos",
+						data: [65, 51, 180, 97, 56, 205, 40],
+						borderColor: 'rgba(2, 2, 2, 0.8)',
+						backgroundColor: 'rgba(2, 2, 2, 0.5)',
+						pointBorderColor: 'rgba(2, 2, 2, 0)',
+						pointBackgroundColor: 'rgba(2, 2, 2, 0.8)',
+						pointBorderWidth: 1
+					}, {
+						label: "Recorrentes",
+						data: [65, 59, 80, 81, 175, 55, 30],
+						borderColor: 'rgba(180, 131, 65, 0.75)',
+						backgroundColor: 'rgba(180, 131, 65, 0.3)',
+						pointBorderColor: 'rgba(180, 131, 65, 0)',
+						pointBackgroundColor: 'rgba(180, 131, 65, 0.9)',
+						pointBorderWidth: 1
+					}]
+				},
+				options: {
+					responsive: true,
+					legend: false
+				}
+			}
+		}
+		return config;
+	}
+
+	// Efeito do Menu
+
 	var media = $('body').width();
+
+	if (media >= 993) {
+		$('button.bar').click(function(event) {
+			var classe = $('.menu').attr('class');
+			if (classe == 'menu') {
+				$('.menu').addClass('close');
+				$(this).css('left', '80px');
+			}else{
+				$('.menu').removeClass('close');
+				$(this).css('left', '280px');
+			}
+		});
+	}
+
 	if (media < 993) {
 		$('.menu').addClass('close');
 		$('button.bar').css('left', '80px');
+
+		$('button.bar').click(function(event) {
+			var classe = $('.menu').attr('class');
+			if (classe == 'menu') {
+				$('.menu').addClass('close');
+				$(this).css('left', '80px');
+				$('main').find('.back').remove();
+				$('main').css('filter', 'blur(0px)');
+			}else{
+				$('.menu').removeClass('close');
+				$(this).css('left', '280px');
+				$('main').prepend('<div class="back"></div>');
+				$('main').css('filter', 'blur(3px)');
+			}
+		});
+
 	}
 
-	// Página de Posts
+	// Configurações de Inputs
 
 	var url_atual = window.location.hostname;
 	$('.dominio').text(url_atual);
@@ -80,6 +140,21 @@ $(document).ready(function() {
 		$(this).select();
 	});
 	$('#url').focusout(function(event) {
+		var valor = $(this).val();
+		valor = valor.replace(/[áàãâä]/g, 'a');
+		valor = valor.replace(/[éèêë]/g, 'e');
+		valor = valor.replace(/[íìîï]/g, 'i');
+		valor = valor.replace(/[óòõôö]/g, 'o');
+		valor = valor.replace(/[úùûü]/g, 'u');
+		valor = valor.replace(/[ç]/g, 'c');
+		valor = valor.replace(/[\s]/g, '-').toLowerCase();
+		if (valor != null) {
+			$('#url').val(valor);
+			$('#urlgoogle').text(valor);
+			$('#slug').val(valor);
+		}
+	});
+	$('#h1seo').focusout(function(event) {
 		var valor = $(this).val();
 		valor = valor.replace(/[áàãâä]/g, 'a');
 		valor = valor.replace(/[éèêë]/g, 'e');
@@ -203,6 +278,51 @@ $(document).ready(function() {
 		else if (wordLimit == 10) {
 			$(this).val('(' + valor[0]+valor[1] + ') ' + valor[2]+valor[3]+valor[4]+valor[5] + '-' + valor[6]+valor[7]+valor[8]+valor[9])
 		}
+	});
+
+	function ImagePreview(input)
+	{
+
+		if (input.files && input.files[0])
+		{
+
+			var r = new FileReader();
+
+			r.onload = function(e)
+			{
+				$("#img_preview").show();
+				$("#img_preview").attr("src", e.target.result);
+			}
+
+			r.readAsDataURL(input.files[0]);
+
+		}
+	}
+
+	$().ready(function() {
+
+		hide_empty_image = false;
+		set_blank_to_empty_image = false;
+		set_image_border = true;
+
+		if (hide_empty_image)
+			$("#img_preview").hide();
+
+		if (set_blank_to_empty_image)
+			$("#img_preview").attr("src","data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
+
+		$("#img_input").change(function(){
+			ImagePreview(this);
+		});
+
+	});
+
+	$('input[name=categorias]').change(function(event) {
+		var shot = $('input[name=categorias]:checked').attr('id');
+		$('input[name=categorias]+label').each(function(index, el) {
+			$(this).css('display', 'none');
+		});
+		$('#' + shot + '+label').css('display', 'block');
 	});
 
 	CKEDITOR.replace('descricao');

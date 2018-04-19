@@ -32,14 +32,10 @@
 				<div class="col offset-m3 m6 s12">
 					<fieldset>
 						<form method="GET" action="#">
-							<div class="file-field input-field">
-								<div class="btn">
-									<span>Foto de Perfil</span>
-									<input type="file">
-								</div>
-								<div class="file-path-wrapper">
-									<input class="file-path validate" type="text">
-								</div>
+							<div class="col s12 img">
+								<input type="file" id="img_input" required />
+								<span class="fa fa-camera"></span>
+								<img id="img_preview" src="images/user.jpg" alt="Usuario" />
 							</div>
 							<div class="col m6 s12">
 								<input type="text" name="primeironome" id="primeironome" required placeholder="Primeiro Nome:">

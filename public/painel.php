@@ -13,7 +13,7 @@
 
 	<!-- Google -->
 	<title>Dashboard</title>
-	<meta name="description" content="Pagina Inicial do Painel com Dados Administrativos"/>
+	<meta name="description" content="Pagina Inicial do Painel com Dados Administrativos ainda não pensei muito bem nela"/>
 	<meta name="keywords" content="Dashboard"/>
 
 </head>
@@ -24,8 +24,23 @@
 	<main>
 
 		<section>
-			<div class="row">
-
+			<div class="row painel">
+				<div class="col l3 m6 s12">
+					<div class="info-box bg-orange">
+						<div class="icon">
+							<span class="fa fa-user"></span>
+						</div>
+						<div class="content">
+							<h2>Visitantes</h2>
+							<p>1552</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="card col m6 s12">
+					<h3>Usúarios</h3>
+					<canvas id="line_chart" height="100"></canvas>
+				</div>
 			</div>
 		</section>
 		
