@@ -3,7 +3,7 @@
   <div class="menu">
     <div class="user">
       <figure>
-        <img src="images/user.jpg" alt="Nome do Usuario">
+        <img src="images/logo.jpg" alt="Nome do Usuario">
         <figcaption>Nome do Usuario</figcaption>
       </figure>
       <h1>Jessica Barros</h1>
@@ -37,6 +37,9 @@
             <a href="usuarios.php"><p><span class="fa fa-edit"></span> Criar</p></a>
             <a href="busca-editores.php"><p><span class="fa fa-search"></span> Buscar</p></a>
           </div>
+        </li>
+        <li>
+          <a href="logout.php"><div class="collapsible-header"><p><span class="fa fa-sign-out-alt"></span> Sair</p></div></a>
         </li>
       </ul>
     </div>

@@ -31,11 +31,11 @@
 				<p>Caro administrador essa área está dedicada para criação e edição de editores no seu site, lembre-se de preencher todos os dados corretamente, assim você estará evidenciando seus profissionais e qual o nivel de qualidade dos mesmos.</p>
 				<div class="col offset-m3 m6 s12">
 					<fieldset>
-						<form method="GET" action="#">
+						<form method="POST" action="registrar_usuario.php">
 							<div class="col s12 img">
 								<input type="file" id="img_input" required />
 								<span class="fa fa-camera"></span>
-								<img id="img_preview" src="images/user.jpg" alt="Usuario" />
+								<img id="img_preview" src="images/logo.jpg" alt="Usuario" />
 							</div>
 							<div class="col m6 s12">
 								<input type="text" name="primeironome" id="primeironome" required placeholder="Primeiro Nome:">

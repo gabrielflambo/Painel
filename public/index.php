@@ -31,14 +31,14 @@
 						</header>
 						<article>
 							<fieldset>
-								<form method="POST" action="#">
+								<form method="POST" action="#" onsubmit="loginController.login(event)">
 									<div class="input-field">
 										<label for="usuario">Usúario</label>
-										<input type="text" name="usuario" required class="validate">
+										<input type="text" name="usuario" id="usuario" required class="validate">
 									</div>
 									<div class="input-field">
 										<label for="senha">Senha</label>
-										<input type="password" name="senha" required class="validate">
+										<input type="password" name="senha" id="senha" required class="validate">
 									</div>
 									<div class="input-field">
 										<button type="submit" class="btn waves-effect">Entrar</button>
@@ -59,6 +59,12 @@
 
 	<?php require("links.php") ?>
 	<?php require("scripts.php") ?>
+
+	<script type="text/javascript" src="js/app/controllers/LoginController.js"></script>
+	<script type="text/javascript" src="js/app/models/Acesso.js"></script>
+	<script type="text/javascript">
+		let loginController = new LoginController();
+	</script>
 
 </body>
 </html>

@@ -34,13 +34,21 @@
 							<h2>Adicionar Post <span class="fa fa-edit"></span></h2>
 							<div class="clearfix"></div>
 							<cite><span class="fa fa-lightbulb"></span> Escolha uma das categorias abaixo para lincar sua matéria</cite>
-							<div class="clearfix"></div>
-							<input type="radio" name="categorias" id="marketing" />
-							<label for="marketing">Marketing Digital</label>
-							<input type="radio" name="categorias" id="seo" />
-							<label for="seo">SEO</label>
-							<input type="radio" name="categorias" id="google" />
-							<label for="google">Google Adwords</label>
+							<div class="col s12">
+								<label for="marketing">
+								<input type="radio" name="categorias" id="marketing" />
+								<span>Marketing Digital</span>
+								</label>
+								<label for="seo">
+								<input type="radio" name="categorias" id="seo" />
+								<span>SEO</span>
+								</label>
+								<label for="google">
+								<input type="radio" name="categorias" id="google" />
+								<span>Google Adwords</span>
+								</label>
+								<button type="button" class="btn waves-effect" id="resetar">Reset</button>
+							</div>
 							<div class="clearfix"></div>
 							<!-- Titulo principal da Máteria -->
 							<cite><span class="fa fa-lightbulb"></span> Títulos bem elaborados aumentam o número de visitas nos seus Posts.</cite>

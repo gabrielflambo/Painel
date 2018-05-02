@@ -35,10 +35,14 @@
 									<div class="clearfix"></div>
 									<input type="text" name="busca" required placeholder="Digite aqui...">
 									<div class="clearfix"></div>
-									<input type="checkbox" class="filled-in" name="autores" id="marketing" />
-									<label for="marketing">Marketing Digital</label>
-									<input type="checkbox" class="filled-in" name="autores" id="seo" />
-									<label for="seo">SEO</label>
+									<label for="marketing">
+										<input type="checkbox" class="filled-in" name="autores" id="marketing" />
+										<span>Marketing Digital</span>
+									</label>
+									<label for="seo">
+										<input type="checkbox" class="filled-in" name="autores" id="seo" />
+										<span>SEO</span>
+									</label>
 									<button type="submit" class="btn waves-effect">Buscar</button>
 								</form>
 							</fieldset>
