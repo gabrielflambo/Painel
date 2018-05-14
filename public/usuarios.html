@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<?php require 'menu.php'; ?>
+	<div include="menu.html"></div>
 
 	<main>
 
@@ -89,8 +89,20 @@
 	</main>
 
 
-	<?php require("links.php"); ?>
-	<?php require("scripts.php"); ?>
+	<link type="text/css" rel="stylesheet" href="css/estilo.css">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+	<script src="js/app/controllers/IncludeController.js"></script>
+	<script src="js/app/services/Request.js"></script>
+	<script>
+		let includecontroller = new IncludeController();
+	</script>
+	<script defer src="js/plugins/fontawesome-all.min.js"></script>
+	<script src="js/plugins/materialize.min.js"></script>
+	<script src="js/app/controllers/MenuController.js"></script>
+	<script src="js/app/models/Menu.js"></script>
+	<script >
+		let menuController = new MenuController();
+	</script>
 	<script type="text/javascript" src="js/app/controllers/UserController.js"></script>
 	<script type="text/javascript" src="js/app/helpers/Image.js"></script>
 	<script type="text/javascript" src="js/app/helpers/Filtro.js"></script>

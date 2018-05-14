@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<?php require 'menu.php'; ?>
+	<div include="menu.html"></div>
 
 	<main>
 
@@ -106,7 +106,7 @@
 				</section>
 
 				<!-- Caso o cliente contratar o SEO -->
-				<?php require 'seo.php'; ?>
+				<div include="seo.html"></div>
 
 				<section>
 					<div class="row action center">
@@ -125,9 +125,25 @@
 	</main>
 
 
-	<?php require("links.php"); ?>
-	<?php require("scripts.php"); ?>
+	<link type="text/css" rel="stylesheet" href="css/estilo.css">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+	<script src="js/app/controllers/IncludeController.js"></script>
+	<script src="js/app/services/Request.js"></script>
+	<script >
+		let includecontroller = new IncludeController();
+	</script>
+	<script defer src="js/plugins/fontawesome-all.min.js"></script>
+	<script src="js/plugins/materialize.min.js"></script>
+	<script src="ckeditor/ckeditor.js"></script>
+	<script src="js/app/controllers/MenuController.js"></script>
+	<script src="js/app/models/Menu.js"></script>
+	<script >
+		let menuController = new MenuController();
+	</script>
 	<script src="js/app/controllers/InsertController.js"></script>
+	<script >
+		let insertController = new InsertController();
+	</script>
 	<script src="js/app/controllers/SEOController.js"></script>
 	<script src="js/app/models/SEO.js"></script>
 	<script src="js/app/helpers/Filtro.js"></script>
@@ -135,9 +151,7 @@
 	<script src="js/app/services/Barra.js"></script>
 	<script src="js/app/views/SEOView.js"></script>
 	<script>
-		let insertController = new InsertController();
 		let seoController = new SEOController();
 	</script>
-
 </body>
 </html>

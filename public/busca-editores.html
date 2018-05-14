@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<?php require 'menu.php'; ?>
+	<div include="menu.html"></div>
 
 	<main>
 
@@ -48,7 +48,7 @@
 				<div class="row resultado">
 					<div class="col l8 s12">
 						<article>
-							<a href="usuarios.php" class="btn waves-effect right" title="Ver mais detalhes">
+							<a href="usuarios.html" class="btn waves-effect right" title="Ver mais detalhes">
 								<span class="fa fa-edit"></span>
 							</a>
 							<h2><strong>Editor:</strong> Gabriel Flambo</h2>
@@ -56,7 +56,7 @@
 							<h3><strong>Quantidade de Posts:</strong> 27</h3>
 						</article>
 						<article>
-							<a href="usuarios.php" class="btn waves-effect right" title="Ver mais detalhes">
+							<a href="usuarios.html" class="btn waves-effect right" title="Ver mais detalhes">
 								<span class="fa fa-edit"></span>
 							</a>
 							<h2><strong>Editor:</strong> Gabriel Flambo</h2>
@@ -70,8 +70,20 @@
 		</main>
 
 
-		<?php require("links.php"); ?>
-		<?php require("scripts.php"); ?>
+		<link type="text/css" rel="stylesheet" href="css/estilo.css">
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+		<script src="js/app/controllers/IncludeController.js"></script>
+		<script src="js/app/services/Request.js"></script>
+		<script>
+			let includecontroller = new IncludeController();
+		</script>
+		<script defer src="js/plugins/fontawesome-all.min.js"></script>
+		<script src="js/plugins/materialize.min.js"></script>
+		<script src="js/app/controllers/MenuController.js"></script>
+		<script src="js/app/models/Menu.js"></script>
+		<script >
+			let menuController = new MenuController();
+		</script>
 
 	</body>
 	</html>
