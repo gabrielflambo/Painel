@@ -31,7 +31,7 @@
 						</header>
 						<article>
 							<fieldset>
-								<form method="POST" action="#" onsubmit="loginController.login(event)">
+								<form method="POST" action="#">
 									<div class="input-field">
 										<label for="usuario">Usúario</label>
 										<input type="text" name="usuario" id="usuario" required class="validate">
@@ -57,14 +57,8 @@
 	</main>
 
 
-	<?php require("links.php") ?>
-	<?php require("scripts.php") ?>
-
-	<script type="text/javascript" src="js/app/controllers/LoginController.js"></script>
-	<script type="text/javascript" src="js/app/models/Acesso.js"></script>
-	<script type="text/javascript">
-		let loginController = new LoginController();
-	</script>
+	<?php require("links.php"); ?>
+	<?php require("scripts.php"); ?>
 
 </body>
 </html>

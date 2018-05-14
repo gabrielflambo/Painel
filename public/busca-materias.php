@@ -31,14 +31,20 @@
 						<article>
 							<fieldset>
 								<form method="POST" action="#">
-									<cite><span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada ou selecione abaixo para fazer busca pelo editor.</cite>
+									<cite>
+										<span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada ou selecione abaixo para fazer busca pelo editor.
+									</cite>
 									<div class="clearfix"></div>
 									<input type="text" name="busca" required placeholder="Digite aqui...">
 									<div class="clearfix"></div>
-									<input type="checkbox" class="filled-in" name="autores" id="autor1" />
-									<label for="autor1">Gabriel Flambo</label>
-									<input type="checkbox" class="filled-in" name="autores" id="autor2" />
-									<label for="autor2">Jessica Barros</label>
+									<label for="autor1" title="Buscar materias de Gabriel Flambo">
+										<input type="checkbox" class="filled-in" name="autores" id="autor1" />
+										<span>Gabriel Flambo</span>
+									</label>
+									<label for="autor2" title="Buscar materias de Jessica Barros">
+										<input type="checkbox" class="filled-in" name="autores" id="autor2" />
+										<span>Jessica Barros</span>
+									</label>
 									<button type="submit" class="btn waves-effect">Buscar</button>
 								</form>
 							</fieldset>
@@ -51,17 +57,27 @@
 				<div class="row resultado">
 					<div class="col l8 s12">
 						<article>
-							<a href="materias.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
+							<a href="materias.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-edit"></span>
+							</a>
 							<h2><strong>Título:</strong>
-								<a href="www.localhost.com.br/8-formas-de-ganhar-dinheiro-na-internet/"> 8 Formas de Ganhar dinheiro na Internet</a>
+								<a href="www.localhost.com.br/8-formas-de-ganhar-dinheiro-na-internet/"
+								title="Acesse o link">
+									8 Formas de Ganhar dinheiro na Internet
+								</a>
 							</h2>
 							<h3><strong>Autor:</strong> Gabriel Flambo</h3>
 							<h3><strong>Publicação:</strong> 18 de Abril de 2018</h3>
 						</article>
 						<article>
-							<a href="materias.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
+							<a href="materias.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-edit"></span>
+							</a>
 							<h2><strong>Título:</strong>
-								<a href="www.localhost.com.br/8-formas-de-ganhar-dinheiro-na-internet/"> 8 Formas de Ganhar dinheiro na Internet</a>
+								<a href="www.localhost.com.br/8-formas-de-ganhar-dinheiro-na-internet/"
+								title="Acesse o link">
+									8 Formas de Ganhar dinheiro na Internet
+								</a>
 							</h2>
 							<h3><strong>Autor:</strong> Gabriel Flambo</h3>
 							<h3><strong>Publicação:</strong> 18 de Abril de 2018</h3>
@@ -73,8 +89,8 @@
 		</main>
 
 
-		<?php require("links.php") ?>
-		<?php require("scripts.php") ?>
+		<?php require("links.php"); ?>
+		<?php require("scripts.php"); ?>
 
 	</body>
 	</html>

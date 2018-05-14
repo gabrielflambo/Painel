@@ -25,7 +25,9 @@
 
 		<section>
 			<div class="row usuarios center">
-				<a href="#" class="btn waves-effect right"><span class="fa fa-trash"></span></a>
+				<a href="#" class="btn waves-effect right" title="Excluir editor">
+					<span class="fa fa-trash"></span>
+				</a>
 				<div class="clearfix"></div>
 				<h2>Área para administradores</h2>
 				<p>Caro administrador essa área está dedicada para criação e edição de editores no seu site, lembre-se de preencher todos os dados corretamente, assim você estará evidenciando seus profissionais e qual o nivel de qualidade dos mesmos.</p>
@@ -33,36 +35,50 @@
 					<fieldset>
 						<form method="POST" action="registrar_usuario.php">
 							<div class="col s12 img">
-								<input type="file" id="img_input" required />
+								<input type="file" id="img_input" required 
+								onchange="userController.image(this)" 
+								title="Trocar foto de perfil"/>
 								<span class="fa fa-camera"></span>
 								<img id="img_preview" src="images/logo.jpg" alt="Usuario" />
 							</div>
 							<div class="col m6 s12">
-								<input type="text" name="primeironome" id="primeironome" required placeholder="Primeiro Nome:">
+								<input type="text" name="primeironome" id="primeironome" required 
+								placeholder="Primeiro Nome:">
 							</div>
 							<div class="col m6 s12">
-								<input type="text" name="ultimonome" id="ultimonome" required placeholder="Ultimo Nome:">
+								<input type="text" name="ultimonome" id="ultimonome" required 
+								onfocusout="userController.user()" 
+								placeholder="Ultimo Nome:">
 							</div>
 							<div class="col m6 s12">
-								<input type="tel" name="telefone" id="telefone" required placeholder="Telefone:" minlength="10" maxlength="11">
+								<input type="tel" name="telefone" id="telefone" required 
+								onfocusout="userController.mask(this)" 
+								minlength="10" maxlength="11"
+								placeholder="Telefone:">
 							</div>
 							<div class="col m6 s12">
-								<input type="email" name="email" required placeholder="E-mail:">
+								<input type="email" name="email" required 
+								placeholder="E-mail:">
 							</div>
 							<div class="col s12">
-								<textarea name="conteudo" required rows="3" placeholder="Descrição como profissional:"></textarea>
+								<textarea name="conteudo" required rows="3" 
+								placeholder="Descrição como profissional:"></textarea>
 							</div>
 							<div class="col s12">
-								<input type="text" name="twitter" required placeholder="Twitter:">
+								<input type="text" name="twitter" required 
+								placeholder="Twitter:">
 							</div>
 							<div class="col m6 s12">
-								<input type="text" name="usuario" id="usuario" required placeholder="Usúario:">
+								<input type="text" name="usuario" id="usuario" required 
+								placeholder="Usúario:">
 							</div>
 							<div class="col m6 s12">
-								<input type="password" name="senha" required placeholder="Senha:">
+								<input type="password" name="senha" required 
+								placeholder="Senha:">
 							</div>
 							<div class="col s12">
-								<button type="submit" class="btn waves-effect">Criar</button>
+								<button type="submit" 
+								class="btn waves-effect" title="Salvar dados">Criar</button>
 							</div>
 						</form>
 					</fieldset>
@@ -73,8 +89,15 @@
 	</main>
 
 
-	<?php require("links.php") ?>
-	<?php require("scripts.php") ?>
+	<?php require("links.php"); ?>
+	<?php require("scripts.php"); ?>
+	<script type="text/javascript" src="js/app/controllers/UserController.js"></script>
+	<script type="text/javascript" src="js/app/helpers/Image.js"></script>
+	<script type="text/javascript" src="js/app/helpers/Filtro.js"></script>
+	<script type="text/javascript" src="js/app/helpers/Mascara.js"></script>
+	<script type="text/javascript">
+		let userController = new UserController();
+	</script>
 
 </body>
 </html>

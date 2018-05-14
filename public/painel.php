@@ -37,9 +37,9 @@
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="card col m6 s12">
+				<div class="card col s12">
 					<h3>Usúarios</h3>
-					<canvas id="line_chart" height="100"></canvas>
+					<canvas id="line_chart" height="50"></canvas>
 				</div>
 			</div>
 		</section>
@@ -47,8 +47,13 @@
 	</main>
 
 
-	<?php require("links.php") ?>
-	<?php require("scripts.php") ?>
+	<?php require("links.php"); ?>
+	<?php require("scripts.php"); ?>
+	<script src="js/plugins/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="js/app/controllers/GraficoController.js"></script>
+	<script type="text/javascript">
+		let graficoControlller = new GraficoController();
+	</script>
 
 </body>
 </html>

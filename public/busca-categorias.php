@@ -31,7 +31,9 @@
 						<article>
 							<fieldset>
 								<form method="POST" action="#">
-									<cite><span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada.</cite>
+									<cite>
+										<span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada.
+									</cite>
 									<input type="text" name="busca" required placeholder="Digite aqui...">
 									<button type="submit" class="btn waves-effect">Buscar</button>
 								</form>
@@ -45,17 +47,27 @@
 				<div class="row resultado">
 					<div class="col l8 s12">
 						<article>
-							<a href="categorias.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
+							<a href="categorias.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-edit"></span>
+							</a>
 							<h2><strong>Título:</strong> Marketing Digital</h2>
 							<h3><strong>URL:</strong> 
-								<a href="www.localhost.com.br/marketing-digital/" class="urls"> www.localhost.com.br/marketing-digital/</a>
+								<a href="www.localhost.com.br/marketing-digital/" class="urls"
+								title="Acesse o link"> 
+									www.localhost.com.br/marketing-digital/
+								</a>
 							</h3>
 						</article>
 						<article>
-							<a href="categorias.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
+							<a href="categorias.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-edit"></span>
+							</a>
 							<h2><strong>Título:</strong> Marketing Digital</h2>
 							<h3><strong>URL:</strong> 
-								<a href="www.localhost.com.br/marketing-digital/" class="urls"> www.localhost.com.br/marketing-digital/</a>
+								<a href="www.localhost.com.br/marketing-digital/" class="urls"
+								title="Acesse o link"> 
+									www.localhost.com.br/marketing-digital/
+								</a>
 							</h3>
 						</article>
 					</div>

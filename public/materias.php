@@ -28,89 +28,92 @@
 				<section>
 					<div class="row post">
 						<div class="col l4 s12 push-l8">
-							<a href="#" class="btn waves-effect right"><span class="fa fa-trash"></span></a>
+							<a href="#" class="btn waves-effect right" title="Excluir matéria">
+								<span class="fa fa-trash"></span>
+							</a>
 						</div>
 						<div class="col l8 s12 pull-l4">
 							<h2>Adicionar Post <span class="fa fa-edit"></span></h2>
 							<div class="clearfix"></div>
-							<cite><span class="fa fa-lightbulb"></span> Escolha uma das categorias abaixo para lincar sua matéria</cite>
+							<cite>
+								<span class="fa fa-lightbulb"></span> Escolha uma das categorias abaixo para lincar sua matéria
+							</cite>
 							<div class="col s12">
-								<label for="marketing">
-								<input type="radio" name="categorias" id="marketing" />
-								<span>Marketing Digital</span>
+								<label for="marketing" title="Vincular a categoria de Marketing Digital">
+									<input type="radio" name="categorias"
+									onchange="insertController.categorias(this)"
+									id="marketing"/>
+									<span>Marketing Digital</span>
 								</label>
-								<label for="seo">
-								<input type="radio" name="categorias" id="seo" />
-								<span>SEO</span>
+								<label for="seo" title="Vincular a categoria de SEO">
+									<input type="radio" name="categorias"
+									onchange="insertController.categorias(this)"
+									id="seo"/>
+									<span>SEO</span>
 								</label>
-								<label for="google">
-								<input type="radio" name="categorias" id="google" />
-								<span>Google Adwords</span>
+								<label for="google" title="Vincular a categoria de Google Adwords">
+									<input type="radio" name="categorias"
+									onchange="insertController.categorias(this)"
+									id="google"/>
+									<span>Google Adwords</span>
 								</label>
-								<button type="button" class="btn waves-effect" id="resetar">Reset</button>
+								<button type="button" class="btn waves-effect" 
+								onclick="insertController.reset()"
+								id="resetar"
+								title="Resetar a categoria selecionada">Reset</button>
 							</div>
 							<div class="clearfix"></div>
 							<!-- Titulo principal da Máteria -->
-							<cite><span class="fa fa-lightbulb"></span> Títulos bem elaborados aumentam o número de visitas nos seus Posts.</cite>
-							<input type="text" name="h1" id="h1" required placeholder="Escreva um Titulo">
+							<cite>
+								<span class="fa fa-lightbulb"></span> Títulos bem elaborados aumentam o número de visitas nos seus Posts.
+							</cite>
+							<input type="text" name="h1" id="h1" required 
+							onfocusout="insertController.dados(this)"
+							placeholder="Escreva um Titulo">
 							<!-- Url amigavel para o post -->
-							<cite><span class="fa fa-lightbulb"></span> Palavras-chaves na URL destaqua melhor seus artigos.</cite>
-							<p><strong>LINK:</strong> www.<span class="dominio">dominio</span>.com.br/<input type="text" name="url" id="url" required value="escreva-um-titulo"><button type="button" id="editar" class="btn waves-effect">Editar</button></p>
+							<cite>
+								<span class="fa fa-lightbulb"></span> Palavras-chaves na URL destaqua melhor seus artigos.
+							</cite>
+							<p>
+								<strong>LINK:</strong> www.<span class="dominio">dominio</span>.com.br/
+								<input type="text" name="url" id="url" required 
+								onfocusout="insertController.dados(this)"
+								onclick="insertController.url()"
+								value="escreva-um-titulo">
+								<button type="button" id="editar" 
+								onclick="insertController.url()" 
+								class="btn waves-effect"
+								title="Editar o endereço da matéria">Editar</button>
+							</p>
 							<!-- Imagem ilustrativa para colocar de capa -->	
-							<cite><span class="fa fa-lightbulb"></span> Usúarios tendem a ser mais visuais, imagens são a jogada certa.</cite>	
+							<cite>
+								<span class="fa fa-lightbulb"></span> Usúarios tendem a ser mais visuais, imagens são a jogada certa.
+							</cite>	
 							<div class="clearfix"></div>			
-							<button type="button" id="arquivo" class="btn waves-effect"><input type="file" name="file" id="file"><span class="fa fa-images"></span> Mídia</button>
+							<button type="button" id="arquivo" 
+							class="btn waves-effect" title="Escolha a imagem principal">
+								<input type="file" name="file" id="file">
+								<span class="fa fa-images"></span> Mídia
+							</button>
 							<div class="clearfix"></div>	
 							<!-- Editor de texto da materia -->
-							<cite><span class="fa fa-lightbulb"></span> Matérias bem organizadas, sem erros ortográficos, de fácil leituras, mantem o cliente preso ao seu contéudo.</cite>
+							<cite>
+								<span class="fa fa-lightbulb"></span> Matérias bem organizadas, sem erros ortográficos, de fácil leituras, mantem o cliente preso ao seu contéudo.
+							</cite>
 							<textarea name="descricao"></textarea>
 						</div>
 					</div>
 				</section>
 
 				<!-- Caso o cliente contratar o SEO -->
-				<section>
-					<div class="row seo">
-						<div class="col l8 s12">
-							<h2>SEO <span class="fa fa-sitemap"></span></h2>
-							<cite><span class="fa fa-lightbulb"></span> Abaixo temos uma plataforma onde poderemos melhorar dinamicamente como irá aparecer sua página no Google, transformando assim a sua página melhor rankeada. Siga as instruções para melhor aproveitamento da ferramenta e melhora dos resultados.</cite>
-							<h3><span class="fa fa-eye"></span> Pré-visualização</h3>
-							<div class="google">
-								<h4 id="titlegoogle">Titulo do SEO</h4>
-								<cite>https://<span class="dominio">dominio</span>.com.br/<strong><span id="urlgoogle">insira-uma-url</span></strong>/</cite>
-								<div class="clearfix"></div>
-								<p><time><?php echo date('M d Y'); ?> - </time><span id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</span></p>
-							</div>
-							<cite><span class="fa fa-lightbulb"></span> Acima temos o exemplo de como vai aparecer sua página no Google.</cite>
-							<h3>SEO Title</h3>
-							<div>
-								<input type="text" name="h1seo" id="h1seo" required>
-								<div class="progress">
-									<div class="determinate"></div>
-								</div>
-							</div>
-							<cite><span class="fa fa-lightbulb"></span> Títulos com mais de 50 caracteres aparecem truncados no Google.</cite>
-							<h3>Slug</h3>
-							<input type="text" name="slug" id="slug" required>
-							<cite><span class="fa fa-lightbulb"></span> Palavras-chaves na URL destaqua melhor seus artigos.</cite>
-							<h3>Meta Description</h3>
-							<div>
-								<textarea name="meta" id="meta" required rows="3"></textarea>
-								<div class="progress">
-									<div class="determinate"></div>
-								</div>
-							</div>
-							<cite><span class="fa fa-lightbulb"></span> Descrições com mais de 150 caracteres aparecem truncados no Google.</cite>
-						</div>
-					</div>
-				</section>
+				<?php require 'seo.php'; ?>
 
 				<section>
 					<div class="row action center">
 						<article>
 							<div class="col l8 s12">
-								<button type="submit" class="btn waves-effect">Gravar</button>
+								<button type="submit" 
+								class="btn waves-effect" title="Salvar dados">Gravar</button>
 							</div>
 						</article>
 					</div>
@@ -122,8 +125,19 @@
 	</main>
 
 
-	<?php require("links.php") ?>
-	<?php require("scripts.php") ?>
+	<?php require("links.php"); ?>
+	<?php require("scripts.php"); ?>
+	<script src="js/app/controllers/InsertController.js"></script>
+	<script src="js/app/controllers/SEOController.js"></script>
+	<script src="js/app/models/SEO.js"></script>
+	<script src="js/app/helpers/Filtro.js"></script>
+	<script src="js/app/services/Limite.js"></script>
+	<script src="js/app/services/Barra.js"></script>
+	<script src="js/app/views/SEOView.js"></script>
+	<script>
+		let insertController = new InsertController();
+		let seoController = new SEOController();
+	</script>
 
 </body>
 </html>

@@ -31,7 +31,9 @@
 						<article>
 							<fieldset>
 								<form method="POST" action="#">
-									<cite><span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada</cite>
+									<cite>
+										<span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada.
+									</cite>
 									<div class="clearfix"></div>
 									<input type="text" name="busca" required placeholder="Digite aqui...">
 									<button type="submit" class="btn waves-effect">Buscar</button>
@@ -46,13 +48,17 @@
 				<div class="row resultado">
 					<div class="col l8 s12">
 						<article>
-							<a href="usuarios.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
+							<a href="usuarios.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-edit"></span>
+							</a>
 							<h2><strong>Editor:</strong> Gabriel Flambo</h2>
 							<h3><strong>Criado:</strong> 18 de Abril de 2018</h3>
 							<h3><strong>Quantidade de Posts:</strong> 27</h3>
 						</article>
 						<article>
-							<a href="usuarios.php" class="btn waves-effect right"><span class="fa fa-edit"></span></a>
+							<a href="usuarios.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-edit"></span>
+							</a>
 							<h2><strong>Editor:</strong> Gabriel Flambo</h2>
 							<h3><strong>Criado:</strong> 18 de Abril de 2018</h3>
 							<h3><strong>Quantidade de Posts:</strong> 27</h3>
@@ -64,8 +70,8 @@
 		</main>
 
 
-		<?php require("links.php") ?>
-		<?php require("scripts.php") ?>
+		<?php require("links.php"); ?>
+		<?php require("scripts.php"); ?>
 
 	</body>
 	</html>

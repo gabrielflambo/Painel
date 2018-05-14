@@ -172,7 +172,8 @@ button.bar:focus{
 .links{
 	height: 60vh;
 	background-color: #181715;
-	overflow: auto;
+	overflow: hidden;
+	transition: 0.5s all;
 }
 
 .links p{
@@ -215,6 +216,27 @@ button.bar:focus{
 
 .links a{
 	padding: 0 !important;
+}
+
+.links::-webkit-scrollbar-track{
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+.links::-webkit-scrollbar{
+    width: 12px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    transition: 0.5s all;
+}
+
+.links::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 10px;
+}
+
+.links:hover{
+	overflow-y: auto;
 }
 
 .footer{
@@ -426,6 +448,11 @@ button.bar:focus{
 	margin: 2em 0;
 }
 
+#resetar{
+	opacity: 0;
+	background-color: #666 !important;
+}
+
 /*-------- SEO --------*/
 
 .seo{
@@ -554,11 +581,11 @@ button.bar:focus{
 
 }
 
-.busca [type="checkbox"].filled-in+label{
+.busca [type="checkbox"].filled-in+span{
 	margin: .2em 0;
 }
 
-.busca [type="checkbox"].filled-in:checked+label:after{
+.busca [type="checkbox"].filled-in:checked+span:after{
 	background-color: #181715 !important;
 	border: 1px solid #181715 !important;
 }
@@ -726,6 +753,10 @@ button.bar:focus{
 /*-------- TIPOGRAFIA --------*/
 body{
 	overflow: hidden;
+}
+
+button{
+	cursor: pointer !important;
 }
 
 .row{

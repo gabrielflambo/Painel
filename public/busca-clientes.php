@@ -31,15 +31,19 @@
 						<article>
 							<fieldset>
 								<form method="POST" action="#">
-									<cite><span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada ou selecione abaixo para fazer busca por assunto.</cite>
+									<cite>
+										<span class="fa fa-lightbulb"></span> Insira a referência abaixo para ser buscada ou selecione abaixo para fazer busca por assunto.
+									</cite>
 									<div class="clearfix"></div>
 									<input type="text" name="busca" required placeholder="Digite aqui...">
 									<div class="clearfix"></div>
-									<label for="marketing">
+									<label for="marketing" 
+									title="Clientes interessados em Marketing Digital">
 										<input type="checkbox" class="filled-in" name="autores" id="marketing" />
 										<span>Marketing Digital</span>
 									</label>
-									<label for="seo">
+									<label for="seo"
+									title="Clientes interessados em SEO">
 										<input type="checkbox" class="filled-in" name="autores" id="seo" />
 										<span>SEO</span>
 									</label>
@@ -55,13 +59,17 @@
 				<div class="row resultado">
 					<div class="col l8 s12">
 						<article>
-							<a href="clientes.php" class="btn waves-effect right"><span class="fa fa-plus"></span></a>
+							<a href="clientes.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-plus"></span>
+							</a>
 							<h2><strong>Cliente:</strong> Gabriel Flambo</h2>
 							<h3><strong>Data de Cadastro:</strong> 18 de Abril de 2018</h3>
 							<h3><strong>Assuntos de Interesse:</strong> Marketing Digital, SEO</h3>
 						</article>
 						<article>
-							<a href="clientes.php" class="btn waves-effect right"><span class="fa fa-plus"></span></a>
+							<a href="clientes.php" class="btn waves-effect right" title="Ver mais detalhes">
+								<span class="fa fa-plus"></span>
+							</a>
 							<h2><strong>Cliente:</strong> Gabriel Flambo</h2>
 							<h3><strong>Data de Cadastro:</strong> 18 de Abril de 2018</h3>
 							<h3><strong>Assuntos de Interesse:</strong> Marketing Digital, SEO</h3>
