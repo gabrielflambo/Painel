@@ -1,28 +1,21 @@
 {
-  "name": "work",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "dasboard",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "jade": "latest",
+    "body-parser": "^1.18.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "guid": "0.0.12",
+    "http": "0.0.0",
+    "md5": "^2.2.1",
+    "mongoose": "^5.1.2"
+  },
   "devDependencies": {
-    "grunt": "^1.0.2",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^2.2.1",
-    "grunt-contrib-imagemin": "^2.0.1",
-    "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-php": "^1.5.1",
-    "grunt-rev": "^0.1.0",
-    "grunt-usemin": "^3.1.1",
-    "load-grunt-tasks": "^3.5.2"
-  },
-  "dependencies": {},
-  "description": ""
+    "nodemon": "^1.17.5"
+  }
 }

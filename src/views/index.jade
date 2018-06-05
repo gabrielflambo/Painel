@@ -1,0 +1,43 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="content-language", content="pt-br")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+    meta(http-equiv="cache-control", content="public")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="robots", content="noindex, nofollow")
+    meta(name="author", content="Gabriel Flambo")
+
+    title Painel Administrativo
+    meta(name="description", content="Painel visando facilidade no dia a dia no ambiente Web")
+    meta(name="keywords", content="Painel Administrativo")
+
+  body
+    
+    main
+      section(class="row login")
+        .middle
+          .painel
+            header
+              h1 Painel Administrativo
+              p Para acessar o painel insira seu usúario e senha abaixo:
+            article
+              fieldset
+                form(method="POST", action="#")
+                  .input-field
+                    label(for="usuario") Usúario
+                    input(type="text", name="usuario", required, class="validate")
+                  .input-field
+                    label(for="senha") Senha
+                    input(type="password", name="senha", required, class="validate")
+                  .input-field
+                    button(type="submit", class="btn waves-effect") Entrar
+          footer
+            h2 Liberty
+              strong Mark
+
+  link(type="text/css", rel="stylesheet", href="css/materialize.min.css", media="screen,projection")
+  link(type="text/css", rel="stylesheet", href="css/estilo.css")
+  script(type="text/javascript", src="js/plugins/materialize.min.js")

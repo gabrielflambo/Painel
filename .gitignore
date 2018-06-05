@@ -1,6 +1,4 @@
 .tmp
 node_modules
-.gitignore
-Gruntfile.js
 package-lock.json
 package.json
