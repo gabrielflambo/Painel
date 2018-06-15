@@ -1,0 +1,47 @@
+section
+	div(class="row seo")
+		div(class="col l8 s12")
+			h2 SEO 
+				span(class="fa fa-sitemap")
+			cite
+				span(class="fa fa-lightbulb")
+				span  Abaixo temos uma plataforma onde poderemos melhorar dinamicamente como irá aparecer sua página no Google, transformando assim a sua página melhor rankeada. Siga as instruções para melhor aproveitamento da ferramenta e melhora dos resultados.
+			h3
+				span(class="fa fa-eye")  
+				span  Pré-visualização
+			.google
+				h4(id="titlegoogle") #{model.metaTitle || 'Titulo do SEO'}
+				cite
+					span(class="dominio") https://dominio
+					span .com.br/
+					strong
+						span(id="urlgoogle") #{model.slug || 'insira-uma-url'}
+					span /
+				.clearfix
+				p
+					time Nov 28 2018 - 
+					span(id="description") #{model.metaDescription || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.'}
+			cite
+				span(class="fa fa-lightbulb")
+				span  Acima temos o exemplo de como vai aparecer sua página no Google.
+			h3 SEO Title
+			div
+				input(type="text", name="metaTitle", id="h1seo", required, onfocusout="seoController.dados(this)", oninput="seoController.key(this, 50)", value="#{model.metaTitle || ''}")
+				.progress
+					.determinate
+			cite
+				span(class="fa fa-lightbulb")
+				span  Títulos com mais de 50 caracteres aparecem truncados no Google.
+			h3 Slug
+			input(type="text", name="slug", id="slug", required, onfocusout="seoController.dados(this)", value="#{model.slug || ''}")
+			cite
+				span(class="fa fa-lightbulb")
+				span  Palavras-chaves na URL destaqua melhor seus artigos.
+			h3 Meta Description
+			div
+				textarea(name="metaDescription", id="meta", required, rows="3", onfocusout="seoController.dados(this)", oninput="seoController.key(this, 150)") #{model.metaDescription || ''}
+				.progress
+					.determinate
+			cite
+				span(class="fa fa-lightbulb")
+				span  Descrições com mais de 150 caracteres aparecem truncados no Google.

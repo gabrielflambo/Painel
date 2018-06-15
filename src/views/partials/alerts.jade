@@ -1,0 +1,25 @@
+if messages.erro
+	div(class="modal-back open" role="dialog")
+		div(class="alert danger")
+			span(class="fa fa-exclamation-triangle")
+			div
+				h2 Ops... Algo deu errado!
+				p #{messages.erro}
+				button(type="button" value="fechar" class="btn waves-effect") Tentar Novamente
+if messages.info
+	div(class="modal-back open" role="dialog")
+		div(class="alert info")
+			span(class="fa fa-check-circle")
+			div
+				h2 Tudo Certo!
+				p #{messages.info}
+				button(type="button" value="fechar" class="btn waves-effect") Fechar
+
+div(class="modal-back excluir" role="dialog")
+	div(class="alert danger")
+		span(class="fa fa-trash")
+		div
+			h2 Tem Certeza?
+			p Se você concordar você não verá, nem poderá mais voltar a ver esse dado cadastrado.
+			button(type="button" onclick="Excluir('sim')" class="btn waves-effect") Sim
+			button(type="button" onclick="Excluir('nao')" class="btn waves-effect") Não

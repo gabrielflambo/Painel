@@ -1,0 +1,74 @@
+nav
+	button(class="bar", onclick="menuController.fade()")
+		span(class="fa fa-exchange-alt")
+	.menu
+		.user
+			figure(title="Foto de perfil")
+				img(src="images/logo.jpg", alt="Nome do Usuario")
+				figcaption Nome do Usuario
+			h1 Jessica Barros
+			h2 @jessica.barros
+		.links
+			ul(class="collapsible", data-collapsible="accordion")
+				li
+					a(href="dashboard", title="Acesse a página inicial")
+						.collapsible-header
+							p 
+								span(class="fa fa-home")
+								span Home
+				li
+					div(class="collapsible-header", title="Visualize suas categorias")
+						p
+							span(class="fa fa-paste")
+							span Categorias
+					.collapsible-body
+						a(href="categorias", title="Criar novas categorias")
+							p
+								span(class="fa fa-edit")
+								span Criar
+						a(href="categorias/busca", title="Buscar categorias existentes")
+							p
+								span(class="fa fa-search")
+								span Buscar
+				li
+					div(class="collapsible-header", title="Visualize suas matérias")
+						p
+							span(class="fa fa-newspaper")
+							span Materias
+					.collapsible-body
+						a(href="materias", title="Criar novas matérias")
+							p
+								span(class="fa fa-edit")
+								span Criar
+						a(href="materias/busca", title="Buscar matérias existentes")
+							p
+								span(class="fa fa-search")
+								span Buscar
+				li
+					a(href="clientes", title="Buscar clientes cadastrados")
+						.collapsible-header
+							p 
+								span(class="fa fa-users")
+								span Clientes
+				li
+					div(class="collapsible-header", title="Visualize seus editores")
+						p
+							span(class="fa fa-lock")
+							span Editores
+					.collapsible-body
+						a(href="editores", title="Criar novos editores")
+							p
+								span(class="fa fa-edit")
+								span Criar
+						a(href="editores/busca", title="Buscar editores existentes")
+							p
+								span(class="fa fa-search")
+								span Buscar
+				li
+					a(href="logout", title="Sair do painel")
+						.collapsible-header
+							p 
+								span(class="fa fa-sign-out-alt")
+								span Sair
+		.footer
+			h2 LibertyMark

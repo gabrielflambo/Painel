@@ -1,0 +1,76 @@
+doctype html
+html(lang="pt-br")
+  head
+    base(href="/")
+    meta(charset="utf-8")
+    meta(http-equiv="content-language", content="pt-br")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+    meta(http-equiv="cache-control", content="public")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="robots", content="noindex, nofollow")
+    meta(name="author", content="Gabriel Flambo")
+
+    title Criar Categoria
+    meta(name="description", content="Onde criamos e editamos novas categorias para o nosso blog.")
+    meta(name="keywords", content="Categorias")
+
+  body
+    include ../partials/menu
+    include ../partials/alerts
+
+    main
+      fieldset
+        form(method="POST", action="categorias")
+          section
+            div(class="row post")
+              div(class="col l4 s12 push-l8")
+              div(class="col l8 s12 pull-l4")
+                h2 Adicionar Categoria 
+                  span(class="fa fa-edit")
+                cite
+                  span(class="fa fa-lightbulb") 
+                  span  Títulos bem elaborados aumentam o número de visitas nas Páginas.
+                input(type="text", name="title", id="h1", required, onfocusout="insertController.dados(this)", placeholder="Escreva um Titulo" value="#{model.title || ''}")
+                cite
+                  span(class="fa fa-lightbulb")
+                  span  Palavras-chaves na URL destaqua melhor seus artigos.
+                p
+                  strong LINK: 
+                  span(class="dominio") www.dominio
+                  span .com.br/
+                  input(type="text," name="url", id="url", required, onfocusout="insertController.dados(this)", onclick="insertController.url()", value="#{model.slug || 'escreva-um-titulo'}")
+                  button(type="button", id="editar", onclick="insertController.url()", class="btn waves-effect", title="Editar o endereço da categoria") Editar
+                .clearfix
+                cite
+                  span(class="fa fa-lightbulb")
+                  span  Escrevendo uma descrição ilustrativa para sua categoria deixa seus usúarios mais curiosos e mais interessados.
+                textarea(name="descricao") #{model.descricao || ''}
+
+          include ../partials/seo
+
+          section
+            div(class="row action center")
+              article
+                div(class="col l8 s12")
+                  button(type="submit", class="btn waves-effect", title="Salvar dados") Gravar
+      
+
+  link(type="text/css", rel="stylesheet", href="css/estilo.css")
+  link(type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection")
+  script(defer, src="js/plugins/fontawesome-all.min.js")
+  script(src="js/plugins/materialize.min.js")
+  script(src="ckeditor/ckeditor.js")
+  script(src="js/app/controllers/MenuController.js")
+  script(src="js/app/models/Menu.js")
+  script(src="js/app/controllers/InsertController.js")
+  script(src="js/app/controllers/SEOController.js")
+  script(src="js/app/models/SEO.js")
+  script(src="js/app/helpers/Filtro.js")
+  script(src="js/app/services/Limite.js")
+  script(src="js/app/services/Barra.js")
+  script(src="js/app/views/SEOView.js")
+  script(type="text/javascript").
+    let menuController = new MenuController();
+    let insertController = new InsertController();
+    let seoController = new SEOController();
